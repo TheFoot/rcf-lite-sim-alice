@@ -4,11 +4,6 @@ import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 import { readFileSync } from 'node:fs';
 import { Router } from 'express';
-import { registerProjectRoutes } from './routes/projects.mjs';
-import { registerTemplateRoutes } from './routes/templates.mjs';
-import { registerSectionRoutes } from './routes/sections.mjs';
-import { registerDashboardRoutes } from './routes/dashboard.mjs';
-import { registerExportRoutes } from './routes/export.mjs';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -54,11 +49,6 @@ app.use((_req, res, next) => {
 
 app.use(express.static(join(__dirname, '..', 'public')));
 
-// Serve marked library from node_modules for client-side markdown rendering
-app.get('/vendor/marked.min.mjs', (_req, res) => {
-  res.sendFile(join(__dirname, '..', '..', 'node_modules', 'marked', 'lib', 'marked.esm.js'));
-});
-
 // ---------------------------------------------------------------------------
 // API routes
 // ---------------------------------------------------------------------------
@@ -71,12 +61,6 @@ app.get('/api/v1/health', (_req, res) => {
     timestamp: new Date().toISOString(),
   });
 });
-
-registerProjectRoutes(apiRouter);
-registerTemplateRoutes(apiRouter);
-registerSectionRoutes(apiRouter);
-registerDashboardRoutes(apiRouter);
-registerExportRoutes(apiRouter);
 
 app.use('/api/v1', apiRouter);
 
