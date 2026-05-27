@@ -1,0 +1,79 @@
+{
+  "overview": "The Bug Tracker is a single-page application built with Express.js (backend) and vanilla JavaScript (frontend). Bugs are persisted as flat JSON files in data/. The frontend uses client-side routing with a component-based architecture. The app has three main views: a dashboard with summary statistics, a filterable bugs list, and a bug detail/edit view. Status transitions are handled via a dedicated PATCH endpoint.",
+  "created": "2026-05-27T10:10:00.000Z",
+  "updated": "2026-05-27T10:10:00.000Z",
+  "components": [
+    {
+      "name": "Bug API Routes",
+      "purpose": "REST API for CRUD operations on bugs, including status transition endpoint",
+      "tracesTo": ["REQ-001", "REQ-002"],
+      "technology": "Express.js 4.x with flat JSON file persistence",
+      "files": ["src/server/routes/bugs.mjs"]
+    },
+    {
+      "name": "Dashboard API Route",
+      "purpose": "Aggregation endpoint that computes bug counts by status and priority",
+      "tracesTo": ["REQ-003"],
+      "technology": "Express.js 4.x",
+      "files": ["src/server/routes/dashboard.mjs"]
+    },
+    {
+      "name": "Bug List View",
+      "purpose": "Displays all bugs as clickable cards with status and priority badges, includes filter controls",
+      "tracesTo": ["REQ-001", "REQ-004"],
+      "technology": "Vanilla JS components",
+      "files": ["src/public/js/components/bug-card.mjs", "src/public/js/services/bugs-api.mjs"]
+    },
+    {
+      "name": "Bug Detail View",
+      "purpose": "Shows full bug details with edit/delete actions and status transition buttons",
+      "tracesTo": ["REQ-001", "REQ-002"],
+      "technology": "Vanilla JS components",
+      "files": ["src/public/js/components/bug-detail.mjs"]
+    },
+    {
+      "name": "Bug Form",
+      "purpose": "Create and edit form for bugs with validation",
+      "tracesTo": ["REQ-001"],
+      "technology": "Vanilla JS components",
+      "files": ["src/public/js/components/bug-form.mjs"]
+    },
+    {
+      "name": "Dashboard View",
+      "purpose": "Landing page with summary stats, priority breakdown, and recent bugs",
+      "tracesTo": ["REQ-003"],
+      "technology": "Vanilla JS components",
+      "files": ["src/public/js/components/dashboard-view.mjs"]
+    },
+    {
+      "name": "Filter Controls",
+      "purpose": "Dropdown filters for status, priority, and assignee on the bugs list page",
+      "tracesTo": ["REQ-004"],
+      "technology": "Vanilla JS components",
+      "files": ["src/public/js/components/bug-filters.mjs"]
+    }
+  ],
+  "endpoints": [
+    { "method": "GET", "path": "/api/v1/bugs", "purpose": "List all bugs", "tracesTo": "REQ-001" },
+    { "method": "GET", "path": "/api/v1/bugs/:id", "purpose": "Get single bug", "tracesTo": "REQ-001" },
+    { "method": "POST", "path": "/api/v1/bugs", "purpose": "Create a bug", "tracesTo": "REQ-001" },
+    { "method": "PUT", "path": "/api/v1/bugs/:id", "purpose": "Update a bug", "tracesTo": "REQ-001" },
+    { "method": "DELETE", "path": "/api/v1/bugs/:id", "purpose": "Delete a bug", "tracesTo": "REQ-001" },
+    { "method": "PATCH", "path": "/api/v1/bugs/:id/status", "purpose": "Transition bug status", "tracesTo": "REQ-002" },
+    { "method": "GET", "path": "/api/v1/dashboard", "purpose": "Dashboard summary statistics", "tracesTo": "REQ-003" }
+  ],
+  "dataModel": [
+    {
+      "entity": "Bug",
+      "fields": [
+        { "name": "id", "type": "string", "required": true, "description": "UUID primary key" },
+        { "name": "title", "type": "string", "required": true, "description": "Short bug summary" },
+        { "name": "description", "type": "string", "required": false, "description": "Detailed bug description" },
+        { "name": "status", "type": "string", "required": true, "description": "One of: open, in-progress, resolved, closed" },
+        { "name": "priority", "type": "string", "required": true, "description": "One of: critical, high, medium, low" },
+        { "name": "assignee", "type": "string", "required": false, "description": "Name of assigned team member" },
+        { "name": "createdAt", "type": "string", "required": true, "description": "ISO 8601 creation timestamp" }
+      ]
+    }
+  ]
+}

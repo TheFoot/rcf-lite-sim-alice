@@ -1,0 +1,15 @@
+{
+  "id": "BS-003",
+  "title": "Dashboard overview",
+  "description": "Implement dashboard API endpoint that aggregates bug counts by status and priority. Build a dashboard view component with summary statistics, priority breakdown, and a recent bugs section with clickable links.",
+  "requirement": "REQ-003",
+  "story": "US-003",
+  "acceptanceCriteria": ["AC-003-01", "AC-003-02", "AC-003-03"],
+  "designContext": "GET /api/v1/dashboard returns { total, byStatus: { open, inProgress, resolved, closed }, byPriority: { critical, high, medium, low }, recentBugs: [...top 5] }. Dashboard view shows stat cards, priority badges, and a recent bugs list. Each recent bug links to /bugs/:id.",
+  "standards": ["rest-api", "spa-patterns"],
+  "dependencies": ["BS-001"],
+  "status": "ready",
+  "order": 3,
+  "created": "2026-05-27T10:10:00.000Z",
+  "updated": "2026-05-27T10:10:00.000Z"
+}
