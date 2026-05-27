@@ -1,110 +1,110 @@
 [
   {
-    "id": "7665e360-6ea1-494a-8a2c-9dfbc1500b4f",
-    "createdAt": "2026-05-26T02:34:51.846Z",
-    "title": "Optimised Report",
-    "description": "Consider updating the initial setup for the data export feature.",
-    "status": "resolved",
-    "priority": "medium",
-    "assignee": "Tina Davis"
-  },
-  {
-    "id": "bbb49f46-15e8-49ea-a9b0-cc2492d9fe45",
-    "createdAt": "2026-05-25T02:37:38.736Z",
-    "title": "Unified Template",
-    "description": "Focus on delivering backend processing of the file upload handler. This task involves the initial setup for the access control module.",
-    "status": "in-progress",
-    "priority": "medium",
-    "assignee": "Ben Baker"
-  },
-  {
-    "id": "61d25be6-f573-4657-a96c-01fcb161a7a3",
-    "createdAt": "2026-05-12T03:19:42.100Z",
-    "title": "Modular Pipeline",
-    "description": "Consider updating data transformation within the file upload handler. The specification outlines a complete rewrite of the file upload handler.",
-    "status": "resolved",
+    "id": "472d7a29-9f80-4720-9a92-9956e656496d",
+    "createdAt": "2026-05-14T13:07:24.591Z",
+    "title": "Modular Endpoint",
+    "description": "This component handles user-facing changes in the API gateway layer.",
+    "status": "open",
     "priority": "critical",
-    "assignee": "Karen Ito"
+    "assignee": "Quinn Kim"
   },
   {
-    "id": "e5c48e72-e86f-4c06-84c4-fc6bd88c369e",
-    "createdAt": "2026-05-03T21:04:31.154Z",
-    "title": "Integrated Pipeline",
-    "description": "The team discussed user-facing changes in the file upload handler. Focus on delivering performance tuning of the API gateway layer.",
-    "status": "open",
-    "priority": "low",
-    "assignee": "Sam Baker"
-  },
-  {
-    "id": "c2506464-dd7a-49e6-a4ab-1975712baeb5",
-    "createdAt": "2026-04-28T05:23:21.392Z",
-    "title": "Dynamic Pipeline",
-    "description": "We need to implement a complete rewrite of the data export feature. Testing should verify data transformation within the access control module.",
-    "status": "in-progress",
-    "priority": "low",
-    "assignee": "James Vasquez"
-  },
-  {
-    "id": "a3ed024e-2573-45c5-ac85-79f799809af8",
-    "createdAt": "2026-04-22T01:50:36.303Z",
-    "title": "Automated Migration",
-    "description": "This task involves validation logic for the API gateway layer. The specification outlines the initial setup for the access control module.",
+    "id": "32b0e6f4-cde8-41bd-80f8-1f0b53683f41",
+    "createdAt": "2026-05-11T07:36:55.087Z",
+    "title": "Unified Workflow",
+    "description": "We need to implement performance tuning of the event processing pipeline.",
     "status": "open",
     "priority": "medium",
-    "assignee": "Ben Ito"
+    "assignee": "Victor Vasquez"
   },
   {
-    "id": "0db3c7fd-068e-4ef8-8a51-8ec7916c9bde",
-    "createdAt": "2026-03-22T22:35:39.295Z",
+    "id": "f794bc2e-59ec-45a3-9bd6-de6a29f03c13",
+    "createdAt": "2026-05-07T17:17:26.490Z",
+    "title": "Streamlined Report",
+    "description": "The team discussed a complete rewrite of the event processing pipeline.",
+    "status": "open",
+    "priority": "medium",
+    "assignee": "David Nguyen"
+  },
+  {
+    "id": "a7cf22a7-c6bb-437d-8316-a78c6a856481",
+    "createdAt": "2026-05-07T00:24:06.785Z",
+    "title": "Scalable Configuration",
+    "description": "The requirement covers the initial setup for the user registration flow.",
+    "status": "open",
+    "priority": "critical",
+    "assignee": "Ben Lee"
+  },
+  {
+    "id": "1efc7afa-5aad-40ed-ae3d-8c37aebc3a8c",
+    "createdAt": "2026-05-06T23:14:46.014Z",
+    "title": "Streamlined Report",
+    "description": "The requirement covers validation logic for the reporting dashboard. Testing should verify user-facing changes in the configuration manager.",
+    "status": "in-progress",
+    "priority": "critical",
+    "assignee": "Frank Taylor"
+  },
+  {
+    "id": "c092807a-2ac8-45a0-be98-c26c5d076b50",
+    "createdAt": "2026-04-29T04:29:29.036Z",
     "title": "Interactive Service",
-    "description": "We need to implement validation logic for the API gateway layer.",
-    "status": "open",
-    "priority": "low",
-    "assignee": "Alice Quinn"
-  },
-  {
-    "id": "f95ceabb-8ca7-4a12-880f-1173aafb3a87",
-    "createdAt": "2026-03-18T00:09:54.162Z",
-    "title": "Secure Template",
-    "description": "Focus on delivering performance tuning of the event processing pipeline.",
-    "status": "open",
-    "priority": "critical",
-    "assignee": "Nathan Ueda"
-  },
-  {
-    "id": "6fc30fa4-c322-4c3f-9fc8-687ebb80eb16",
-    "createdAt": "2026-03-17T18:18:47.858Z",
-    "title": "Automated Deployment",
-    "description": "This component handles the initial setup for the API gateway layer. The specification outlines backend processing of the data export feature.",
-    "status": "resolved",
-    "priority": "low",
-    "assignee": "Olivia Vasquez"
-  },
-  {
-    "id": "429283c1-2aec-45ae-9574-871ffd88b103",
-    "createdAt": "2026-03-09T12:31:52.979Z",
-    "title": "Streamlined Configuration",
-    "description": "We need to implement the initial setup for the API gateway layer. Review the approach for a complete rewrite of the notification subsystem.",
-    "status": "open",
-    "priority": "low",
-    "assignee": "Uma Evans"
-  },
-  {
-    "id": "68cd6fc2-7e7b-4247-b889-7a901b71e52e",
-    "createdAt": "2026-03-03T02:40:36.975Z",
-    "title": "Automated Service",
-    "description": "Testing should verify user-facing changes in the configuration manager.",
-    "status": "open",
-    "priority": "low",
-    "assignee": "James Young"
-  },
-  {
-    "id": "9418e88d-3297-4df5-8067-b2711113b7f7",
-    "createdAt": "2026-03-02T22:46:09.706Z",
-    "title": "Automated Module",
-    "description": "Review the approach for user-facing changes in the access control module.",
+    "description": "Consider updating a complete rewrite of the access control module.",
     "status": "open",
     "priority": "medium",
-    "assignee": "Olivia Patel"
+    "assignee": "Tina Roberts"
+  },
+  {
+    "id": "aa803650-f128-403f-b782-9808a180d9a6",
+    "createdAt": "2026-04-26T21:29:07.733Z",
+    "title": "Unified Template",
+    "description": "Review the approach for performance tuning of the configuration manager.",
+    "status": "closed",
+    "priority": "critical",
+    "assignee": "Carla Garcia"
+  },
+  {
+    "id": "9a276a5c-0391-4d41-9d5d-1ed8bedddccd",
+    "createdAt": "2026-04-25T06:59:22.989Z",
+    "title": "Modular Module",
+    "description": "This component handles validation logic for the access control module.",
+    "status": "open",
+    "priority": "medium",
+    "assignee": "Quinn Williams"
+  },
+  {
+    "id": "4454c1d7-9ede-4f6f-8a22-5e522376a1b0",
+    "createdAt": "2026-04-17T11:00:34.295Z",
+    "title": "Scalable Configuration",
+    "description": "We need to implement error handling across the data export feature.",
+    "status": "in-progress",
+    "priority": "medium",
+    "assignee": "Wendy Chen"
+  },
+  {
+    "id": "a8292aeb-1b8d-427c-9371-45fe33e0b164",
+    "createdAt": "2026-04-17T06:27:56.364Z",
+    "title": "Unified Deployment",
+    "description": "Consider updating performance tuning of the access control module.",
+    "status": "closed",
+    "priority": "medium",
+    "assignee": "Nathan Harris"
+  },
+  {
+    "id": "018369e2-4721-45a1-8301-54435ef15319",
+    "createdAt": "2026-03-28T00:42:31.497Z",
+    "title": "Dynamic Dashboard",
+    "description": "The team discussed performance tuning of the user registration flow. Testing should verify error handling across the data export feature.",
+    "status": "open",
+    "priority": "low",
+    "assignee": "Ben Johnson"
+  },
+  {
+    "id": "0780d0c5-c2c3-4678-a640-6a239263d9c3",
+    "createdAt": "2026-03-19T09:08:09.036Z",
+    "title": "Streamlined Workflow",
+    "description": "Testing should verify data transformation within the search indexing service.",
+    "status": "open",
+    "priority": "medium",
+    "assignee": "Ben Garcia"
   }
 ]

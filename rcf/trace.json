@@ -1,0 +1,86 @@
+{
+  "generated": "2026-05-27T10:30:00.000Z",
+  "chains": [
+    {
+      "requirement": { "id": "REQ-001", "title": "Bug CRUD" },
+      "stories": [
+        {
+          "id": "US-001",
+          "title": "Manage bugs",
+          "acceptanceCriteria": [
+            {
+              "id": "AC-001-01",
+              "buildSpec": { "id": "BS-001", "status": "verified" },
+              "testSpec": { "id": "TS-001", "status": "passed", "testCount": 2, "passingCount": 2 }
+            },
+            {
+              "id": "AC-001-02",
+              "buildSpec": { "id": "BS-001", "status": "verified" },
+              "testSpec": { "id": "TS-001", "status": "passed", "testCount": 3, "passingCount": 3 }
+            },
+            {
+              "id": "AC-001-03",
+              "buildSpec": { "id": "BS-001", "status": "verified" },
+              "testSpec": { "id": "TS-001", "status": "passed", "testCount": 1, "passingCount": 1 }
+            },
+            {
+              "id": "AC-001-04",
+              "buildSpec": { "id": "BS-001", "status": "verified" },
+              "testSpec": { "id": "TS-001", "status": "passed", "testCount": 2, "passingCount": 2 }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "requirement": { "id": "REQ-002", "title": "Status workflow" },
+      "stories": [
+        {
+          "id": "US-002",
+          "title": "Transition bug status",
+          "acceptanceCriteria": [
+            { "id": "AC-002-01" },
+            { "id": "AC-002-02" },
+            { "id": "AC-002-03" }
+          ]
+        }
+      ]
+    },
+    {
+      "requirement": { "id": "REQ-003", "title": "Dashboard overview" },
+      "stories": [
+        {
+          "id": "US-003",
+          "title": "View dashboard summary",
+          "acceptanceCriteria": [
+            { "id": "AC-003-01" },
+            { "id": "AC-003-02" },
+            { "id": "AC-003-03" }
+          ]
+        }
+      ]
+    },
+    {
+      "requirement": { "id": "REQ-004", "title": "Filtering and search" },
+      "stories": [
+        {
+          "id": "US-004",
+          "title": "Filter bugs list",
+          "acceptanceCriteria": [
+            { "id": "AC-004-01" },
+            { "id": "AC-004-02" },
+            { "id": "AC-004-03" }
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "totalRequirements": 4,
+    "totalAcceptanceCriteria": 13,
+    "coveredAcceptanceCriteria": 4,
+    "totalTests": 8,
+    "passingTests": 8,
+    "coveragePercent": 30.77
+  }
+}
