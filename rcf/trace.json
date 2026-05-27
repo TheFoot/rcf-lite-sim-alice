@@ -39,9 +39,21 @@
           "id": "US-002",
           "title": "Transition bug status",
           "acceptanceCriteria": [
-            { "id": "AC-002-01" },
-            { "id": "AC-002-02" },
-            { "id": "AC-002-03" }
+            {
+              "id": "AC-002-01",
+              "buildSpec": { "id": "BS-002", "status": "verified" },
+              "testSpec": { "id": "TS-002", "status": "passed", "testCount": 3, "passingCount": 3 }
+            },
+            {
+              "id": "AC-002-02",
+              "buildSpec": { "id": "BS-002", "status": "verified" },
+              "testSpec": { "id": "TS-002", "status": "passed", "testCount": 1, "passingCount": 1 }
+            },
+            {
+              "id": "AC-002-03",
+              "buildSpec": { "id": "BS-002", "status": "verified" },
+              "testSpec": { "id": "TS-002", "status": "passed", "testCount": 1, "passingCount": 1 }
+            }
           ]
         }
       ]
@@ -78,9 +90,9 @@
   "summary": {
     "totalRequirements": 4,
     "totalAcceptanceCriteria": 13,
-    "coveredAcceptanceCriteria": 4,
-    "totalTests": 8,
-    "passingTests": 8,
-    "coveragePercent": 30.77
+    "coveredAcceptanceCriteria": 7,
+    "totalTests": 14,
+    "passingTests": 14,
+    "coveragePercent": 53.85
   }
 }
