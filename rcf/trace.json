@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-27T10:30:00.000Z",
+  "generated": "2026-05-27T11:00:00.000Z",
   "chains": [
     {
       "requirement": { "id": "REQ-001", "title": "Bug CRUD" },
@@ -91,9 +91,21 @@
           "id": "US-004",
           "title": "Filter bugs list",
           "acceptanceCriteria": [
-            { "id": "AC-004-01" },
-            { "id": "AC-004-02" },
-            { "id": "AC-004-03" }
+            {
+              "id": "AC-004-01",
+              "buildSpec": { "id": "BS-004", "status": "verified" },
+              "testSpec": { "id": "TS-004", "status": "passed", "testCount": 2, "passingCount": 2 }
+            },
+            {
+              "id": "AC-004-02",
+              "buildSpec": { "id": "BS-004", "status": "verified" },
+              "testSpec": { "id": "TS-004", "status": "passed", "testCount": 1, "passingCount": 1 }
+            },
+            {
+              "id": "AC-004-03",
+              "buildSpec": { "id": "BS-004", "status": "verified" },
+              "testSpec": { "id": "TS-004", "status": "passed", "testCount": 2, "passingCount": 2 }
+            }
           ]
         }
       ]
@@ -102,9 +114,9 @@
   "summary": {
     "totalRequirements": 4,
     "totalAcceptanceCriteria": 13,
-    "coveredAcceptanceCriteria": 10,
-    "totalTests": 19,
-    "passingTests": 19,
-    "coveragePercent": 76.92
+    "coveredAcceptanceCriteria": 13,
+    "totalTests": 24,
+    "passingTests": 24,
+    "coveragePercent": 100.0
   }
 }

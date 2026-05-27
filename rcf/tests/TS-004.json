@@ -1,41 +1,45 @@
 {
   "id": "TS-004",
   "buildSpec": "BS-004",
-  "acceptanceCriteria": ["AC-004-01", "AC-004-02", "AC-004-03"],
+  "acceptanceCriteria": [
+    "AC-004-01",
+    "AC-004-02",
+    "AC-004-03"
+  ],
   "testCases": [
     {
       "id": "TC-004-01",
       "description": "GET /api/v1/bugs?status=open returns only open bugs",
       "verifiesAc": "AC-004-01",
-      "status": "pending"
+      "status": "passing"
     },
     {
       "id": "TC-004-02",
       "description": "GET /api/v1/bugs?priority=critical returns only critical bugs",
       "verifiesAc": "AC-004-02",
-      "status": "pending"
+      "status": "passing"
     },
     {
       "id": "TC-004-03",
       "description": "GET /api/v1/bugs with no filters returns all bugs",
       "verifiesAc": "AC-004-03",
-      "status": "pending"
+      "status": "passing"
     },
     {
       "id": "TC-004-04",
       "description": "GET /api/v1/bugs?status=open&priority=high returns bugs matching both filters",
       "verifiesAc": "AC-004-01",
-      "status": "pending"
+      "status": "passing"
     },
     {
       "id": "TC-004-05",
       "description": "Bugs list HTML page loads successfully",
       "verifiesAc": "AC-004-03",
-      "status": "pending"
+      "status": "passing"
     }
   ],
   "testFile": "src/tests/filtering.test.mjs",
-  "status": "defined",
+  "status": "passed",
   "created": "2026-05-27T10:50:00.000Z",
-  "updated": "2026-05-27T10:50:00.000Z"
+  "updated": "2026-05-27T18:58:57.355Z"
 }
