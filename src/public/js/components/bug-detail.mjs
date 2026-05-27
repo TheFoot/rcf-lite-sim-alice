@@ -2,7 +2,13 @@
  * Detail component for a single bug.
  */
 
-export function createBugDetail({ item, onEdit, onDelete } = {}) {
+const TRANSITION_MAP = {
+  'open': { next: 'in-progress', label: 'Start Work', className: 'btn btn-warning' },
+  'in-progress': { next: 'resolved', label: 'Resolve', className: 'btn btn-success' },
+  'resolved': { next: 'closed', label: 'Close', className: 'btn btn-secondary' },
+};
+
+export function createBugDetail({ item, onEdit, onDelete, onStatusChange } = {}) {
   const container = document.createElement('section');
   container.className = 'bug-detail';
 
@@ -34,6 +40,25 @@ export function createBugDetail({ item, onEdit, onDelete } = {}) {
   priorityBadge.className = `badge badge--priority-${item.priority}`;
   priorityBadge.textContent = item.priority;
   badgeRow.append(statusBadge, priorityBadge);
+
+  // Status transition button
+  const transitionRow = document.createElement('div');
+  transitionRow.className = 'bug-detail__workflow';
+  const transition = TRANSITION_MAP[item.status];
+  if (transition) {
+    const transitionBtn = document.createElement('button');
+    transitionBtn.className = transition.className;
+    transitionBtn.textContent = transition.label;
+    transitionBtn.addEventListener('click', () => {
+      if (onStatusChange) onStatusChange(transition.next);
+    });
+    transitionRow.append(transitionBtn);
+  } else {
+    const closedMsg = document.createElement('span');
+    closedMsg.className = 'text-muted';
+    closedMsg.textContent = 'This bug is closed.';
+    transitionRow.append(closedMsg);
+  }
 
   // Description
   const descRow = document.createElement('div');
@@ -82,6 +107,6 @@ export function createBugDetail({ item, onEdit, onDelete } = {}) {
 
   actions.append(editButton, deleteButton);
 
-  container.append(breadcrumb, heading, badgeRow, descRow, assigneeRow, createdRow, actions);
+  container.append(breadcrumb, heading, badgeRow, transitionRow, descRow, assigneeRow, createdRow, actions);
   return container;
 }

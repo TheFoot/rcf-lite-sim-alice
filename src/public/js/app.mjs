@@ -1,5 +1,5 @@
 import { initRouter, registerRoute, navigate } from './router.mjs';
-import { fetchBugs, fetchBug, createBug, updateBug, deleteBug } from './services/bugs-api.mjs';
+import { fetchBugs, fetchBug, createBug, updateBug, deleteBug, transitionBugStatus } from './services/bugs-api.mjs';
 import { createBugCard } from './components/bug-card.mjs';
 import { createBugForm } from './components/bug-form.mjs';
 import { createBugDetail } from './components/bug-detail.mjs';
@@ -145,6 +145,14 @@ registerRoute('/bugs/:id', async (container, params) => {
           navigate('/bugs');
         } catch (err) {
           alert(`Failed to delete: ${err.message}`);
+        }
+      },
+      onStatusChange: async (newStatus) => {
+        try {
+          await transitionBugStatus(bug.id, newStatus);
+          navigate(`/bugs/${bug.id}`);
+        } catch (err) {
+          alert(`Status transition failed: ${err.message}`);
         }
       },
     });
