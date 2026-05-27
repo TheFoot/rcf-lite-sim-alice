@@ -1,0 +1,41 @@
+{
+  "id": "TS-003",
+  "buildSpec": "BS-003",
+  "acceptanceCriteria": ["AC-003-01", "AC-003-02", "AC-003-03"],
+  "testCases": [
+    {
+      "id": "TC-003-01",
+      "description": "GET /api/v1/dashboard returns total count and status breakdown",
+      "verifiesAc": "AC-003-01",
+      "status": "pending"
+    },
+    {
+      "id": "TC-003-02",
+      "description": "GET /api/v1/dashboard returns priority breakdown",
+      "verifiesAc": "AC-003-02",
+      "status": "pending"
+    },
+    {
+      "id": "TC-003-03",
+      "description": "GET /api/v1/dashboard returns at most 5 recent bugs",
+      "verifiesAc": "AC-003-03",
+      "status": "pending"
+    },
+    {
+      "id": "TC-003-04",
+      "description": "GET /api/v1/dashboard returns correct counts for empty dataset",
+      "verifiesAc": "AC-003-01",
+      "status": "pending"
+    },
+    {
+      "id": "TC-003-05",
+      "description": "Dashboard HTML contains status breakdown section",
+      "verifiesAc": "AC-003-01",
+      "status": "pending"
+    }
+  ],
+  "testFile": "src/tests/dashboard.test.mjs",
+  "status": "defined",
+  "created": "2026-05-27T10:40:00.000Z",
+  "updated": "2026-05-27T10:40:00.000Z"
+}
