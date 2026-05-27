@@ -137,10 +137,47 @@ async function deleteBug(req, res) {
   res.status(204).end();
 }
 
+// Valid status transitions
+const TRANSITIONS = {
+  'open': ['in-progress'],
+  'in-progress': ['resolved'],
+  'resolved': ['closed'],
+  'closed': [],
+};
+
+async function transitionStatus(req, res) {
+  const records = await loadAll();
+  const index = records.findIndex((r) => r.id === req.params.id);
+  if (index === -1) {
+    return res.status(404).json({ error: { code: 'NOT_FOUND', message: 'Bug not found.' } });
+  }
+
+  const body = req.body || {};
+  if (!body.status) {
+    return res.status(400).json({ error: { code: 'VALIDATION_ERROR', message: 'status is required.' } });
+  }
+
+  const current = records[index].status;
+  const allowed = TRANSITIONS[current] || [];
+  if (!allowed.includes(body.status)) {
+    return res.status(400).json({
+      error: {
+        code: 'VALIDATION_ERROR',
+        message: `Cannot transition from '${current}' to '${body.status}'. Allowed: ${allowed.join(', ') || 'none'}.`,
+      },
+    });
+  }
+
+  records[index].status = body.status;
+  await saveAll(records);
+  res.json(records[index]);
+}
+
 export function registerBugRoutes(router) {
   router.get('/bugs', listBugs);
   router.get('/bugs/:id', getBug);
   router.post('/bugs', createBug);
   router.put('/bugs/:id', updateBug);
   router.delete('/bugs/:id', deleteBug);
+  router.patch('/bugs/:id/status', transitionStatus);
 }

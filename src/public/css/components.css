@@ -93,6 +93,17 @@
   margin-right: var(--space-sm);
 }
 
+.bug-detail__workflow {
+  display: flex;
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+  padding: var(--space-md);
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: var(--radius);
+  border: 1px solid var(--color-border);
+  align-items: center;
+}
+
 .bug-detail__actions {
   display: flex;
   gap: var(--space-md);
