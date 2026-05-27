@@ -4,12 +4,23 @@
   "description": "Implement the Bug entity with full CRUD: REST API routes with flat JSON persistence, frontend API service, list view with clickable cards, detail view with edit/delete, and create/edit form with validation. Generate seed data for demo.",
   "requirement": "REQ-001",
   "story": "US-001",
-  "acceptanceCriteria": ["AC-001-01", "AC-001-02", "AC-001-03", "AC-001-04"],
+  "acceptanceCriteria": [
+    "AC-001-01",
+    "AC-001-02",
+    "AC-001-03",
+    "AC-001-04"
+  ],
   "designContext": "Bug entity with fields: title (required string), description (string), status (enum: open/in-progress/resolved/closed, default open), priority (enum: critical/high/medium/low, default medium), assignee (string). Flat JSON file persistence in data/bugs.json. REST API at /api/v1/bugs. Frontend components: bug-card, bug-form, bug-detail. Seed 12 realistic bugs.",
-  "standards": ["rest-api", "spa-patterns", "project-structure", "testing", "security-baseline"],
+  "standards": [
+    "rest-api",
+    "spa-patterns",
+    "project-structure",
+    "testing",
+    "security-baseline"
+  ],
   "dependencies": [],
-  "status": "ready",
+  "status": "verified",
   "order": 1,
   "created": "2026-05-27T10:10:00.000Z",
-  "updated": "2026-05-27T10:10:00.000Z"
+  "updated": "2026-05-27T18:50:51.249Z"
 }

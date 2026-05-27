@@ -1,0 +1,110 @@
+[
+  {
+    "id": "472d7a29-9f80-4720-9a92-9956e656496d",
+    "createdAt": "2026-05-14T13:07:24.591Z",
+    "title": "Modular Endpoint",
+    "description": "This component handles user-facing changes in the API gateway layer.",
+    "status": "open",
+    "priority": "critical",
+    "assignee": "Quinn Kim"
+  },
+  {
+    "id": "32b0e6f4-cde8-41bd-80f8-1f0b53683f41",
+    "createdAt": "2026-05-11T07:36:55.087Z",
+    "title": "Unified Workflow",
+    "description": "We need to implement performance tuning of the event processing pipeline.",
+    "status": "open",
+    "priority": "medium",
+    "assignee": "Victor Vasquez"
+  },
+  {
+    "id": "f794bc2e-59ec-45a3-9bd6-de6a29f03c13",
+    "createdAt": "2026-05-07T17:17:26.490Z",
+    "title": "Streamlined Report",
+    "description": "The team discussed a complete rewrite of the event processing pipeline.",
+    "status": "open",
+    "priority": "medium",
+    "assignee": "David Nguyen"
+  },
+  {
+    "id": "a7cf22a7-c6bb-437d-8316-a78c6a856481",
+    "createdAt": "2026-05-07T00:24:06.785Z",
+    "title": "Scalable Configuration",
+    "description": "The requirement covers the initial setup for the user registration flow.",
+    "status": "open",
+    "priority": "critical",
+    "assignee": "Ben Lee"
+  },
+  {
+    "id": "1efc7afa-5aad-40ed-ae3d-8c37aebc3a8c",
+    "createdAt": "2026-05-06T23:14:46.014Z",
+    "title": "Streamlined Report",
+    "description": "The requirement covers validation logic for the reporting dashboard. Testing should verify user-facing changes in the configuration manager.",
+    "status": "in-progress",
+    "priority": "critical",
+    "assignee": "Frank Taylor"
+  },
+  {
+    "id": "c092807a-2ac8-45a0-be98-c26c5d076b50",
+    "createdAt": "2026-04-29T04:29:29.036Z",
+    "title": "Interactive Service",
+    "description": "Consider updating a complete rewrite of the access control module.",
+    "status": "open",
+    "priority": "medium",
+    "assignee": "Tina Roberts"
+  },
+  {
+    "id": "aa803650-f128-403f-b782-9808a180d9a6",
+    "createdAt": "2026-04-26T21:29:07.733Z",
+    "title": "Unified Template",
+    "description": "Review the approach for performance tuning of the configuration manager.",
+    "status": "closed",
+    "priority": "critical",
+    "assignee": "Carla Garcia"
+  },
+  {
+    "id": "9a276a5c-0391-4d41-9d5d-1ed8bedddccd",
+    "createdAt": "2026-04-25T06:59:22.989Z",
+    "title": "Modular Module",
+    "description": "This component handles validation logic for the access control module.",
+    "status": "open",
+    "priority": "medium",
+    "assignee": "Quinn Williams"
+  },
+  {
+    "id": "4454c1d7-9ede-4f6f-8a22-5e522376a1b0",
+    "createdAt": "2026-04-17T11:00:34.295Z",
+    "title": "Scalable Configuration",
+    "description": "We need to implement error handling across the data export feature.",
+    "status": "in-progress",
+    "priority": "medium",
+    "assignee": "Wendy Chen"
+  },
+  {
+    "id": "a8292aeb-1b8d-427c-9371-45fe33e0b164",
+    "createdAt": "2026-04-17T06:27:56.364Z",
+    "title": "Unified Deployment",
+    "description": "Consider updating performance tuning of the access control module.",
+    "status": "closed",
+    "priority": "medium",
+    "assignee": "Nathan Harris"
+  },
+  {
+    "id": "018369e2-4721-45a1-8301-54435ef15319",
+    "createdAt": "2026-03-28T00:42:31.497Z",
+    "title": "Dynamic Dashboard",
+    "description": "The team discussed performance tuning of the user registration flow. Testing should verify error handling across the data export feature.",
+    "status": "open",
+    "priority": "low",
+    "assignee": "Ben Johnson"
+  },
+  {
+    "id": "0780d0c5-c2c3-4678-a640-6a239263d9c3",
+    "createdAt": "2026-03-19T09:08:09.036Z",
+    "title": "Streamlined Workflow",
+    "description": "Testing should verify data transformation within the search indexing service.",
+    "status": "open",
+    "priority": "medium",
+    "assignee": "Ben Garcia"
+  }
+]
