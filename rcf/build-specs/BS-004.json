@@ -4,12 +4,20 @@
   "description": "Add filter controls to the bugs list page: dropdowns for status, priority, and assignee. Implement client-side filtering with a Clear Filters button that resets all filters.",
   "requirement": "REQ-004",
   "story": "US-004",
-  "acceptanceCriteria": ["AC-004-01", "AC-004-02", "AC-004-03"],
+  "acceptanceCriteria": [
+    "AC-004-01",
+    "AC-004-02",
+    "AC-004-03"
+  ],
   "designContext": "Filter controls are rendered above the bug list. Three dropdowns: status (all/open/in-progress/resolved/closed), priority (all/critical/high/medium/low), assignee (all/dynamic from data). Filtering is client-side -- fetch all bugs then filter in JS. Clear Filters button resets all dropdowns to 'all'.",
-  "standards": ["spa-patterns"],
-  "dependencies": ["BS-001"],
-  "status": "ready",
+  "standards": [
+    "spa-patterns"
+  ],
+  "dependencies": [
+    "BS-001"
+  ],
+  "status": "verified",
   "order": 4,
   "created": "2026-05-27T10:10:00.000Z",
-  "updated": "2026-05-27T10:10:00.000Z"
+  "updated": "2026-05-27T18:58:57.354Z"
 }
