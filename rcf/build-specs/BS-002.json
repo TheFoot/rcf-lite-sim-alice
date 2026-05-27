@@ -4,12 +4,21 @@
   "description": "Add a PATCH endpoint for status transitions (open -> in-progress -> resolved -> closed) with validation. Add status transition buttons to the bug detail view that update immediately.",
   "requirement": "REQ-002",
   "story": "US-002",
-  "acceptanceCriteria": ["AC-002-01", "AC-002-02", "AC-002-03"],
+  "acceptanceCriteria": [
+    "AC-002-01",
+    "AC-002-02",
+    "AC-002-03"
+  ],
   "designContext": "PATCH /api/v1/bugs/:id/status accepts { status } body. Valid transitions: open->in-progress, in-progress->resolved, resolved->closed. Invalid transitions return 400. Detail view shows contextual transition buttons based on current status.",
-  "standards": ["rest-api", "spa-patterns"],
-  "dependencies": ["BS-001"],
-  "status": "ready",
+  "standards": [
+    "rest-api",
+    "spa-patterns"
+  ],
+  "dependencies": [
+    "BS-001"
+  ],
+  "status": "defining",
   "order": 2,
   "created": "2026-05-27T10:10:00.000Z",
-  "updated": "2026-05-27T10:10:00.000Z"
+  "updated": "2026-05-27T18:51:42.868Z"
 }
