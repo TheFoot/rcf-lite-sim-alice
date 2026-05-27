@@ -3,33 +3,31 @@ import { fetchBugs, fetchBug, createBug, updateBug, deleteBug, transitionBugStat
 import { createBugCard } from './components/bug-card.mjs';
 import { createBugForm } from './components/bug-form.mjs';
 import { createBugDetail } from './components/bug-detail.mjs';
+import { createDashboardView } from './components/dashboard-view.mjs';
 
 // ---------------------------------------------------------------------------
 // Route: Dashboard (/)
 // ---------------------------------------------------------------------------
 
-registerRoute('/', (container) => {
-  const section = document.createElement('section');
-  section.className = 'card';
+registerRoute('/', async (container) => {
+  const loading = document.createElement('section');
+  loading.className = 'card';
+  loading.innerHTML = '<h2>Dashboard</h2><p class="text-muted">Loading dashboard data...</p>';
+  container.append(loading);
 
-  const heading = document.createElement('h2');
-  heading.textContent = 'Welcome to Bug Tracker';
+  try {
+    const res = await fetch('/api/v1/dashboard');
+    if (!res.ok) throw new Error(`Dashboard API error: ${res.status}`);
+    const data = await res.json();
 
-  const description = document.createElement('p');
-  description.className = 'text-muted';
-  description.textContent = 'Track and manage software bugs with status workflows, priority levels, and assignment.';
-
-  const nav = document.createElement('div');
-  nav.style.marginTop = 'var(--space-lg)';
-  const bugsLink = document.createElement('a');
-  bugsLink.href = '/bugs';
-  bugsLink.setAttribute('data-link', '');
-  bugsLink.className = 'btn btn-primary';
-  bugsLink.textContent = 'View All Bugs';
-  nav.append(bugsLink);
-
-  section.append(heading, description, nav);
-  container.append(section);
+    container.innerHTML = '';
+    const dashboardView = createDashboardView(data, {
+      onBugClick: (id) => navigate(`/bugs/${id}`),
+    });
+    container.append(dashboardView);
+  } catch (err) {
+    container.innerHTML = `<section class="card"><h2>Dashboard</h2><p style="color: var(--color-error);">Failed to load: ${err.message}</p></section>`;
+  }
 });
 
 // ---------------------------------------------------------------------------

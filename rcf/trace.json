@@ -65,9 +65,21 @@
           "id": "US-003",
           "title": "View dashboard summary",
           "acceptanceCriteria": [
-            { "id": "AC-003-01" },
-            { "id": "AC-003-02" },
-            { "id": "AC-003-03" }
+            {
+              "id": "AC-003-01",
+              "buildSpec": { "id": "BS-003", "status": "verified" },
+              "testSpec": { "id": "TS-003", "status": "passed", "testCount": 3, "passingCount": 3 }
+            },
+            {
+              "id": "AC-003-02",
+              "buildSpec": { "id": "BS-003", "status": "verified" },
+              "testSpec": { "id": "TS-003", "status": "passed", "testCount": 1, "passingCount": 1 }
+            },
+            {
+              "id": "AC-003-03",
+              "buildSpec": { "id": "BS-003", "status": "verified" },
+              "testSpec": { "id": "TS-003", "status": "passed", "testCount": 1, "passingCount": 1 }
+            }
           ]
         }
       ]
@@ -90,9 +102,9 @@
   "summary": {
     "totalRequirements": 4,
     "totalAcceptanceCriteria": 13,
-    "coveredAcceptanceCriteria": 7,
-    "totalTests": 14,
-    "passingTests": 14,
-    "coveragePercent": 53.85
+    "coveredAcceptanceCriteria": 10,
+    "totalTests": 19,
+    "passingTests": 19,
+    "coveragePercent": 76.92
   }
 }

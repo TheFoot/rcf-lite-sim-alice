@@ -236,3 +236,70 @@
 .btn-warning:hover {
   background-color: #d97706;
 }
+
+/* ==========================================================================
+   Dashboard
+   ========================================================================== */
+
+.dashboard__hero {
+  margin-bottom: var(--space-lg);
+}
+
+.dashboard__hero h2 {
+  color: var(--color-accent);
+}
+
+.dashboard__stats {
+  margin-bottom: var(--space-lg);
+}
+
+.stat-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-sm) 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.stat-row:last-child {
+  border-bottom: none;
+}
+
+.stat-row__count {
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+/* ==========================================================================
+   Recent Bugs
+   ========================================================================== */
+
+.recent-bugs-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.recent-bug-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-sm) 0;
+  border-bottom: 1px solid var(--color-border);
+  gap: var(--space-md);
+}
+
+.recent-bug-item:last-child {
+  border-bottom: none;
+}
+
+.recent-bug-item__title {
+  font-weight: 600;
+  flex: 1;
+}
+
+.recent-bug-item__badges {
+  display: flex;
+  gap: var(--space-xs);
+  flex-shrink: 0;
+}

@@ -1,110 +1,110 @@
 [
   {
-    "id": "02eaa2ca-4037-4e6b-a405-0edd99d602c3",
-    "createdAt": "2026-05-26T00:44:20.565Z",
-    "title": "Optimised Migration",
-    "description": "This task involves the core functionality of the access control module.",
-    "status": "open",
-    "priority": "high",
-    "assignee": "Nathan Johnson"
-  },
-  {
-    "id": "31d9e970-6514-43fb-8d31-5dbfd5bf45c8",
-    "createdAt": "2026-05-24T08:56:30.021Z",
-    "title": "Scalable Migration",
-    "description": "The requirement covers incremental improvements to the access control module. Focus on delivering error handling across the data export feature.",
-    "status": "open",
-    "priority": "low",
-    "assignee": "Quinn Evans"
-  },
-  {
-    "id": "f695707f-4dce-4c20-b359-d83f2c330e86",
-    "createdAt": "2026-05-18T11:29:08.254Z",
-    "title": "Automated Service",
-    "description": "Consider updating validation logic for the API gateway layer.",
+    "id": "df24919d-38e7-4faa-b96d-f6154682d725",
+    "createdAt": "2026-05-27T13:29:20.442Z",
+    "title": "Modular Pipeline",
+    "description": "Testing should verify incremental improvements to the file upload handler. Focus on delivering validation logic for the configuration manager.",
     "status": "open",
     "priority": "medium",
-    "assignee": "Karen Adams"
+    "assignee": "Xavier Chen"
   },
   {
-    "id": "21c079c7-9637-40ee-bf6f-df18ad3f67e3",
-    "createdAt": "2026-05-03T20:46:57.067Z",
-    "title": "Responsive Module",
-    "description": "This component handles error handling across the user registration flow.",
+    "id": "a7fd73ef-611e-47c0-9c2d-62063d0091c2",
+    "createdAt": "2026-05-18T22:32:55.551Z",
+    "title": "Secure Service",
+    "description": "Review the approach for backend processing of the notification subsystem. This task involves performance tuning of the data export feature.",
+    "status": "open",
+    "priority": "medium",
+    "assignee": "Ben Foster"
+  },
+  {
+    "id": "8f9a00c1-9571-4615-a115-e6cf20214f37",
+    "createdAt": "2026-05-15T05:44:23.967Z",
+    "title": "Automated Migration",
+    "description": "This component handles validation logic for the reporting dashboard. The specification outlines performance tuning of the user registration flow.",
+    "status": "resolved",
+    "priority": "medium",
+    "assignee": "Olivia Martinez"
+  },
+  {
+    "id": "5ca7825d-d070-4d8f-8076-12c30429bc00",
+    "createdAt": "2026-05-10T15:22:21.763Z",
+    "title": "Resilient Workflow",
+    "description": "The specification outlines user-facing changes in the search indexing service. The team discussed incremental improvements to the access control module.",
     "status": "closed",
     "priority": "medium",
-    "assignee": "Iris Evans"
+    "assignee": "Elena Adams"
   },
   {
-    "id": "82d389c0-efe1-4fe2-993f-342c38975edc",
-    "createdAt": "2026-04-13T19:11:17.688Z",
-    "title": "Scalable Configuration",
-    "description": "We need to implement backend processing of the user registration flow.",
-    "status": "open",
-    "priority": "medium",
-    "assignee": "Sam O'Brien"
-  },
-  {
-    "id": "aee32f48-cb9c-46a2-ba85-696d53e1f60d",
-    "createdAt": "2026-04-11T16:31:34.818Z",
-    "title": "Resilient Configuration",
-    "description": "Focus on delivering incremental improvements to the file upload handler.",
+    "id": "6975c5e8-a5cd-4231-a098-4cb9f726839f",
+    "createdAt": "2026-05-04T16:47:23.252Z",
+    "title": "Secure Endpoint",
+    "description": "This task involves the initial setup for the reporting dashboard.",
     "status": "open",
     "priority": "low",
-    "assignee": "Leo Roberts"
+    "assignee": "Victor Johnson"
   },
   {
-    "id": "d2e2c2ea-9105-4630-ba07-ccc395ab96f9",
-    "createdAt": "2026-04-10T05:07:02.859Z",
-    "title": "Optimised Integration",
-    "description": "We need to implement the initial setup for the configuration manager.",
+    "id": "10d04b7b-da74-43b2-a2be-432b04f3297a",
+    "createdAt": "2026-04-22T16:03:32.827Z",
+    "title": "Streamlined Service",
+    "description": "Consider updating the initial setup for the search indexing service.",
     "status": "open",
     "priority": "medium",
-    "assignee": "Wendy Lee"
+    "assignee": "Ben Taylor"
   },
   {
-    "id": "a3503a6b-c2db-4398-a506-415865a30a04",
-    "createdAt": "2026-04-09T11:31:30.950Z",
-    "title": "Integrated Pipeline",
-    "description": "The specification outlines the core functionality of the event processing pipeline. The specification outlines a complete rewrite of the data export feature.",
-    "status": "in-progress",
+    "id": "50c24ac0-4cab-4635-b8b1-3b561e34ad28",
+    "createdAt": "2026-04-11T23:10:52.522Z",
+    "title": "Resilient Endpoint",
+    "description": "Consider updating user-facing changes in the configuration manager.",
+    "status": "open",
+    "priority": "medium",
+    "assignee": "Paul Quinn"
+  },
+  {
+    "id": "437cc1a2-2191-4612-8cc4-539764bb2411",
+    "createdAt": "2026-04-08T21:05:21.906Z",
+    "title": "Secure Configuration",
+    "description": "This component handles incremental improvements to the reporting dashboard.",
+    "status": "closed",
     "priority": "critical",
-    "assignee": "Olivia Ueda"
+    "assignee": "Ben Young"
   },
   {
-    "id": "0d14ab42-1d8b-4eb3-b7a8-913709aff093",
-    "createdAt": "2026-04-09T02:12:35.269Z",
-    "title": "Unified Report",
-    "description": "This task involves incremental improvements to the event processing pipeline. We need to implement performance tuning of the event processing pipeline.",
-    "status": "resolved",
-    "priority": "high",
-    "assignee": "Frank Young"
-  },
-  {
-    "id": "ddbb76d6-d08c-4ae5-bb80-44003cd7988a",
-    "createdAt": "2026-04-08T20:34:16.711Z",
-    "title": "Modular Endpoint",
-    "description": "The specification outlines error handling across the event processing pipeline. This component handles validation logic for the data export feature.",
-    "status": "in-progress",
-    "priority": "low",
-    "assignee": "Maria Lee"
-  },
-  {
-    "id": "966c2fe4-f933-46e8-a6cb-1b3785977325",
-    "createdAt": "2026-03-29T01:26:33.658Z",
-    "title": "Unified Configuration",
-    "description": "Consider updating the core functionality of the API gateway layer.",
+    "id": "ca959dba-ae07-4431-aac0-4aec6d2e8e42",
+    "createdAt": "2026-03-29T12:29:00.597Z",
+    "title": "Integrated Report",
+    "description": "The specification outlines the core functionality of the search indexing service. The requirement covers error handling across the event processing pipeline.",
     "status": "in-progress",
     "priority": "medium",
-    "assignee": "David Evans"
+    "assignee": "Quinn Vasquez"
   },
   {
-    "id": "6e4f9224-81c3-4e99-8d46-b884721d9c7c",
-    "createdAt": "2026-02-27T19:44:45.033Z",
-    "title": "Scalable Deployment",
-    "description": "Consider updating the initial setup for the configuration manager.",
+    "id": "5c5eb9a9-cb77-4ba4-a967-7bc1668a31b0",
+    "createdAt": "2026-03-11T23:49:21.099Z",
+    "title": "Resilient Endpoint",
+    "description": "Review the approach for error handling across the file upload handler.",
+    "status": "closed",
+    "priority": "medium",
+    "assignee": "Frank Johnson"
+  },
+  {
+    "id": "d208d348-9ccf-4680-ac77-7facb2a2cb15",
+    "createdAt": "2026-03-03T05:34:29.342Z",
+    "title": "Integrated Report",
+    "description": "Focus on delivering a complete rewrite of the event processing pipeline.",
+    "status": "open",
+    "priority": "medium",
+    "assignee": "Uma Taylor"
+  },
+  {
+    "id": "5c2c38f1-e7f5-447f-a0bc-7570d952acbc",
+    "createdAt": "2026-03-02T19:00:14.162Z",
+    "title": "Responsive Module",
+    "description": "This task involves the initial setup for the user registration flow.",
     "status": "resolved",
     "priority": "medium",
-    "assignee": "Elena Foster"
+    "assignee": "Victor Martinez"
   }
 ]
