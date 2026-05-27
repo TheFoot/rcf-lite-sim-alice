@@ -5,6 +5,7 @@ import { dirname, join } from 'node:path';
 import { readFileSync } from 'node:fs';
 import { Router } from 'express';
 import { registerBugRoutes } from './routes/bugs.mjs';
+import { registerDashboardRoutes } from './routes/dashboard.mjs';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -64,6 +65,7 @@ app.get('/api/v1/health', (_req, res) => {
 });
 
 registerBugRoutes(apiRouter);
+registerDashboardRoutes(apiRouter);
 
 app.use('/api/v1', apiRouter);
 
