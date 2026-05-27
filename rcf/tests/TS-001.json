@@ -1,0 +1,59 @@
+{
+  "id": "TS-001",
+  "buildSpec": "BS-001",
+  "acceptanceCriteria": ["AC-001-01", "AC-001-02", "AC-001-03", "AC-001-04"],
+  "testCases": [
+    {
+      "id": "TC-001-01",
+      "description": "POST /api/v1/bugs creates a bug with valid data and returns 201",
+      "verifiesAc": "AC-001-01",
+      "status": "pending"
+    },
+    {
+      "id": "TC-001-02",
+      "description": "POST /api/v1/bugs returns 400 when title is missing",
+      "verifiesAc": "AC-001-01",
+      "status": "pending"
+    },
+    {
+      "id": "TC-001-03",
+      "description": "GET /api/v1/bugs returns an array of all bugs",
+      "verifiesAc": "AC-001-02",
+      "status": "pending"
+    },
+    {
+      "id": "TC-001-04",
+      "description": "GET /api/v1/bugs/:id returns a single bug by ID",
+      "verifiesAc": "AC-001-02",
+      "status": "pending"
+    },
+    {
+      "id": "TC-001-05",
+      "description": "GET /api/v1/bugs/:id returns 404 for non-existent bug",
+      "verifiesAc": "AC-001-02",
+      "status": "pending"
+    },
+    {
+      "id": "TC-001-06",
+      "description": "PUT /api/v1/bugs/:id updates an existing bug",
+      "verifiesAc": "AC-001-03",
+      "status": "pending"
+    },
+    {
+      "id": "TC-001-07",
+      "description": "DELETE /api/v1/bugs/:id removes a bug and returns 204",
+      "verifiesAc": "AC-001-04",
+      "status": "pending"
+    },
+    {
+      "id": "TC-001-08",
+      "description": "DELETE /api/v1/bugs/:id returns 404 for non-existent bug",
+      "verifiesAc": "AC-001-04",
+      "status": "pending"
+    }
+  ],
+  "testFile": "src/tests/bugs.test.mjs",
+  "status": "defined",
+  "created": "2026-05-27T10:15:00.000Z",
+  "updated": "2026-05-27T10:15:00.000Z"
+}
