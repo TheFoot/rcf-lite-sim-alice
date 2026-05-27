@@ -1,0 +1,154 @@
+{
+  "name": "Bug Tracker",
+  "description": "A local-first bug tracking application for development teams. Track software bugs with status workflows (open, in-progress, resolved, closed), priority levels (critical, high, medium, low), and team member assignment. Includes a dashboard with live summary data and filtering capabilities.",
+  "created": "2026-05-27T10:05:00.000Z",
+  "updated": "2026-05-27T10:05:00.000Z",
+  "requirements": [
+    {
+      "id": "REQ-001",
+      "title": "Bug CRUD",
+      "description": "Users can create, view, edit, and delete bug reports. Each bug has a title, description, status, priority, assignee, and creation date.",
+      "priority": "must",
+      "stories": [
+        {
+          "id": "US-001",
+          "title": "Manage bugs",
+          "asA": "developer",
+          "iWant": "to create, view, edit, and delete bug reports",
+          "soThat": "I can track issues in the codebase",
+          "acceptanceCriteria": [
+            {
+              "id": "AC-001-01",
+              "given": "I am on the bugs list page",
+              "when": "I click 'New Bug'",
+              "then": "a form appears where I can enter title, description, priority, and assignee, and submitting creates the bug"
+            },
+            {
+              "id": "AC-001-02",
+              "given": "bugs exist in the system",
+              "when": "I visit the bugs list page",
+              "then": "I see all bugs displayed as clickable cards showing title, status badge, and priority badge"
+            },
+            {
+              "id": "AC-001-03",
+              "given": "I am viewing a bug detail page",
+              "when": "I click Edit",
+              "then": "a pre-populated form lets me update any field and save changes"
+            },
+            {
+              "id": "AC-001-04",
+              "given": "I am viewing a bug detail page",
+              "when": "I click Delete and confirm",
+              "then": "the bug is removed and I am returned to the bugs list"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "REQ-002",
+      "title": "Status workflow",
+      "description": "Bugs follow a defined status workflow: open -> in-progress -> resolved -> closed. Status transitions are available on the bug detail page.",
+      "priority": "must",
+      "stories": [
+        {
+          "id": "US-002",
+          "title": "Transition bug status",
+          "asA": "developer",
+          "iWant": "to move bugs through status stages",
+          "soThat": "the team can see the current state of each issue",
+          "acceptanceCriteria": [
+            {
+              "id": "AC-002-01",
+              "given": "I am viewing a bug with status 'open'",
+              "when": "I click 'Start Work'",
+              "then": "the status changes to 'in-progress' and the UI updates immediately"
+            },
+            {
+              "id": "AC-002-02",
+              "given": "I am viewing a bug with status 'in-progress'",
+              "when": "I click 'Resolve'",
+              "then": "the status changes to 'resolved' and the UI updates immediately"
+            },
+            {
+              "id": "AC-002-03",
+              "given": "I am viewing a bug with status 'resolved'",
+              "when": "I click 'Close'",
+              "then": "the status changes to 'closed' and the UI updates immediately"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "REQ-003",
+      "title": "Dashboard overview",
+      "description": "A dashboard landing page showing summary statistics (total bugs, bugs by status, bugs by priority) and quick navigation to the bugs list.",
+      "priority": "must",
+      "stories": [
+        {
+          "id": "US-003",
+          "title": "View dashboard summary",
+          "asA": "team lead",
+          "iWant": "to see an overview of all bugs at a glance",
+          "soThat": "I can quickly assess the state of the project",
+          "acceptanceCriteria": [
+            {
+              "id": "AC-003-01",
+              "given": "bugs exist in the system",
+              "when": "I visit the dashboard",
+              "then": "I see total bug count and a breakdown by status (open, in-progress, resolved, closed)"
+            },
+            {
+              "id": "AC-003-02",
+              "given": "bugs exist in the system",
+              "when": "I visit the dashboard",
+              "then": "I see a breakdown by priority (critical, high, medium, low)"
+            },
+            {
+              "id": "AC-003-03",
+              "given": "I am on the dashboard",
+              "when": "I look at the recent bugs section",
+              "then": "I see the 5 most recently created bugs with clickable links to their detail pages"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "REQ-004",
+      "title": "Filtering and search",
+      "description": "Users can filter the bugs list by status, priority, and assignee to quickly find relevant issues.",
+      "priority": "should",
+      "stories": [
+        {
+          "id": "US-004",
+          "title": "Filter bugs list",
+          "asA": "developer",
+          "iWant": "to filter bugs by status, priority, and assignee",
+          "soThat": "I can focus on the issues that matter to me",
+          "acceptanceCriteria": [
+            {
+              "id": "AC-004-01",
+              "given": "I am on the bugs list page",
+              "when": "I select a status from the status filter dropdown",
+              "then": "only bugs matching that status are shown"
+            },
+            {
+              "id": "AC-004-02",
+              "given": "I am on the bugs list page",
+              "when": "I select a priority from the priority filter dropdown",
+              "then": "only bugs matching that priority are shown"
+            },
+            {
+              "id": "AC-004-03",
+              "given": "I have applied one or more filters",
+              "when": "I click 'Clear Filters'",
+              "then": "all filters are reset and the full bug list is shown"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
