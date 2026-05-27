@@ -44,7 +44,19 @@ function validate(body, rules) {
 }
 
 async function listBugs(req, res) {
-  const records = await loadAll();
+  let records = await loadAll();
+
+  // Server-side filtering via query parameters
+  if (req.query.status) {
+    records = records.filter((r) => r.status === req.query.status);
+  }
+  if (req.query.priority) {
+    records = records.filter((r) => r.priority === req.query.priority);
+  }
+  if (req.query.assignee) {
+    records = records.filter((r) => r.assignee === req.query.assignee);
+  }
+
   res.json(records);
 }
 

@@ -4,6 +4,7 @@ import { createBugCard } from './components/bug-card.mjs';
 import { createBugForm } from './components/bug-form.mjs';
 import { createBugDetail } from './components/bug-detail.mjs';
 import { createDashboardView } from './components/dashboard-view.mjs';
+import { createBugFilters } from './components/bug-filters.mjs';
 
 // ---------------------------------------------------------------------------
 // Route: Dashboard (/)
@@ -54,23 +55,53 @@ registerRoute('/bugs', async (container) => {
   header.append(heading, newBtn);
   section.append(header);
 
-  try {
-    const bugs = await fetchBugs();
+  // Bug list container (will be re-rendered on filter change)
+  const listContainer = document.createElement('div');
+  listContainer.className = 'bug-list';
+  let allBugs = [];
+
+  function renderBugList(bugs) {
+    listContainer.innerHTML = '';
     if (bugs.length === 0) {
       const empty = document.createElement('p');
       empty.className = 'text-muted';
-      empty.textContent = 'No bugs yet. Create your first bug to get started.';
-      section.append(empty);
+      empty.textContent = 'No bugs match the current filters.';
+      listContainer.append(empty);
     } else {
-      const grid = document.createElement('div');
-      grid.className = 'bug-list';
       for (const bug of bugs) {
         const card = createBugCard(bug);
         card.addEventListener('click', () => navigate(`/bugs/${bug.id}`));
-        grid.append(card);
+        listContainer.append(card);
       }
-      section.append(grid);
     }
+  }
+
+  try {
+    allBugs = await fetchBugs();
+
+    // Extract unique assignees for the filter dropdown
+    const assignees = [...new Set(allBugs.map((b) => b.assignee).filter(Boolean))].sort();
+
+    const filters = createBugFilters({
+      assignees,
+      onFilterChange: (filterState) => {
+        let filtered = allBugs;
+        if (filterState.status) {
+          filtered = filtered.filter((b) => b.status === filterState.status);
+        }
+        if (filterState.priority) {
+          filtered = filtered.filter((b) => b.priority === filterState.priority);
+        }
+        if (filterState.assignee) {
+          filtered = filtered.filter((b) => b.assignee === filterState.assignee);
+        }
+        renderBugList(filtered);
+      },
+    });
+    section.append(filters);
+
+    renderBugList(allBugs);
+    section.append(listContainer);
   } catch (err) {
     const errMsg = document.createElement('p');
     errMsg.style.color = 'var(--color-error)';
